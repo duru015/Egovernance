@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birth certificate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding:5px;
+		}
+		td{
+			padding:15px;
+      
+		}
+    
+		#s1{
+			text-align: center;
+			margin-bottom: 10px;
+
+		}
+    
+    
+		
+	</style>
+</head>
+<body>
+  
+	<div id="s1">
+      <p>अनुसूची १२</p>
+      <p>नियम ७ सँग सम्बन्धित</p>
+      <p>नेपाल सरकार(Government of Nepal)</p>
+    <!--  <p>वडा नं.१५,भक्तपुर नगरपालिका </p>
+      <p>(ward No.15,Bhaktapur Muncipality)</p>-->
+  
+  	
+
+      
+      <h3 style="text-align: center;">जन्म दर्ता प्रमाणपत्र</h3>
+      <h2 style="text-align: center;">(Birth Registration Certificate)</h2>
+  </div>
+  
+  <div>
+  
+  <table border="1px solid #ddd" width="100%"  style="border-collapse: collapse">
+  	
+  	     <tr>
+      <td colspan="2"><b>First Name: &nbsp;&nbsp;&nbsp;&nbsp; <%= user.firstname %></b> </td>
+    </tr>
+      <tr>
+        <td colspan="2"><b>Middle Name: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.middlename %></b> </td>
+      </tr>
+      <tr>
+      <td colspan="2"><b>Last Name: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.lastname %></b> </td>
+      </tr>
+      <tr>
+    <td colspan="2"><b>Date of Birth : &nbsp;&nbsp;&nbsp;&nbsp;<%= user.Dateofbirth %></b></td>
+    </tr>
+    
+        <tr>
+            <td colspan="2"><b>Gender : &nbsp;&nbsp;&nbsp;&nbsp;<%= user.Gender %></b></td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Permanent Address: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.PermanentAddress %></b></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Birth Place: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.BirthPlace %></b></td>
+                    </tr>
+  
+ 
+                    <tr>
+                        <td colspan="2"><b>Full Name of Grandfather: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.Grandfather %></b></td>
+                        </tr>
+                     
+                        <tr>
+                            <th rowspan="3">Father's Details</th>
+                            </tr>
+                            <tr>
+                              <td>Full name: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.Fathername %></td>
+                              </tr>
+                              <tr>
+                                <td>ID(citizenship/password)Number: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.fathercitizenship %></td>
+                                </tr>
+                                <tr>
+                                  <th rowspan="3">Mother's Details</th>
+                                  </tr>
+                                  <tr>
+                                    <td>Full name: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.mothername %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>ID(citizenship/password)Number: &nbsp;&nbsp;&nbsp;&nbsp;<%= user.mothercitizenship %></td>
+                                      </tr>
+                                     </div>
+  
+</table></div> 
+
+ 
+      <p><h3 style="margin-left: 10px;">Signature:</h3></p>
+  <p><h3 style="margin-top:0px;margin-left:10px;">Copy Issue Date: <p id="date" style="position: relative;top: -38px; left: 220px;"></p></h3></p></div>
+  <div style="display: inline-block; float:right">
+  <div style="width:300px;height:100px;border:1px solid #000">
+    <img src="http://localhost:8000/nav/np.jpg" style="width: 80px; height: 80px;margin-left: 100px;">
+  </div>
+  
+  <p style="text-align:right ;margin-right:113px;">Official Stamp</p>
+  <script>
+    var d = new Date();
+document.getElementById("date").innerHTML = d.toDateString();
+    </script>
+</div>
+</body>
+</html>

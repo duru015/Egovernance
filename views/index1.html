@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Birth Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+  <style>
+   body {font-family: Arial, Helvetica, sans-serif;}
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 100%;
+    
+  }
+  .footer{
+  position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+  }
+  .navbar {
+  width: 100%;
+  background-color:blue;
+  overflow: auto;
+  }
+
+.navbar a {
+  float: left;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+  .fa{
+  
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  }
+  </style>
+  
+</head>
+<body>
+    <div style="font-weight: normal;color:white;background-attachment: white;">
+    <nav class="navbar navbar-expand-sm">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+          <img src="http://localhost:8000/nav/np.jpg" alt="logo" style="width:90px;">
+        </a>     
+            <h2>Birth Registration</h2> 
+      <div class="navbar">
+        <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a> 
+       
+        <a href="registration"><i class="fa fa-fw fa-user"></i> Registration</a>
+      </div></div></nav>
+      
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0"  class="active">
+    </li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2" ></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    
+</ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active ">
+      <img src="http://localhost:8000/sheetal/sheetal.jpg" alt="sheetal niwas" width="110" height="500">
+      <div class="carousel-caption">
+        <h3>शीतल निवास, राष्ट्रपतिको कार्यालय</h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost:8000/janakpur/Janki_Mandir.jpg" alt="janakpur" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>सीता माताको जन्मस्थल (जनकपुर)</h3>
+        
+      </div>   </div>
+      <div class="carousel-item ">
+        <img src="http://localhost:8000/everest/Everest.jpg" alt="सगरमाथा" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>सगरमाथा</h3>
+          <p>संसारको सबैभन्दा अग्लो चुचुरो</p>
+        </div>  
+    </div>
+   
+    <div class="carousel-item">
+        <img src="http://localhost:8000/lumbini/lumbini.png" alt="लुम्बिनी" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>लुम्बिनी</h3>
+          <p>लुम्बिनी गौतम बुद्धको जन्मस्थल</p>
+        </div>   
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<div class="container-fluid"> 
+
+  <!-- Control the column width, and how they should appear on different devices -->
+  <div class="row">
+    <div class="col-sm-6" style="background-color:white;">
+      
+    <h4 style="color: Blue;">Contacts</h4>
+            <ul style="color:blue;" >
+              
+                <li>राष्ट्रिय सूचना प्रविधि केन्द्र </li>
+                
+                <li>सिंहदरवार, काठमाडौं</li>
+                <li>फोन: +९७७-१- ४२११९१७, ४२११७१०, ४२११५२७</li>
+                <li>फ्याक्स:+९७७-१-४२४३३६२</li>
+                <li>इमेल: abcdefghijk@nitc.gov.np</li>
+            </ul>
+        </div>
+        <div class="col-sm-6" style="background-color:white;">
+<h4 style="color: Blue;">Follow Us</h4>
+            <ul style="color: blue;" id="u" >
+                <li><a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;Facebook<br></li>   
+                <li><a href="#" class="fa fa-twitter"></a>&nbsp;Twitter<br></li>
+                <li><a href="#" class="fa fa-instagram"></a>&nbsp;&nbsp;Instagram<br></li>
+                <li><a href="#" class="fa fa-linkedin"></a>&nbsp;&nbsp;LinkedIn<br></li>
+            </ul>
+        </div>
+    </div></div>
+    <div class="footer">
+           <center> <p> सर्वाधिकार © २०७८ नेपाल सरकार,  राष्ट्रिय सूचना प्रविधि केन्द्र, सिंहदरवार, काठमाडौं</p></center>
+        </div>
+        
+</body>
+</html>
+
+
+
+    
+

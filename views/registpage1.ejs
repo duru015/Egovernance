@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birth certificate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+  
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding:5px;
+		}
+		td{
+			padding:10px;
+		}
+    
+		#s1{
+			text-align: center;
+			margin-bottom: 1px;
+
+		}
+   
+  .footer{
+  position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+  }
+  .navbar {
+  width: 100%;
+  background-color:blue;
+ 
+  }
+
+.navbar a {
+  float: left;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width:500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  .fa{
+  
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  } 
+    .footer{
+  position:static;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+  }
+}
+		
+	</style>
+</head>
+<body style="background-color: rgb(235, 235, 222);">
+    
+    <div style="font-weight: normal;color:white;background-attachment: white;">
+    <nav class="navbar navbar-expand-sm">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+          <img src="http://localhost:8000/nav/np.jpg" alt="logo" style="width:90px;">
+        </a>     
+            <h2>Birth Registration</h2> 
+      <div class="navbar">
+        <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a> 
+       
+      </div></div></nav>
+	<div id="s1">
+      <p>अनुसूची १२</p>
+      <p>नियम ७ सँग सम्बन्धित</p>
+      <p>नेपाल सरकार(Government of Nepal)</p>
+    <!--  <p>वडा नं.१५,भक्तपुर नगरपालिका </p>
+      <p>(ward No.15,Bhaktapur Muncipality)</p>-->
+      <h4 style="text-align: center;">जन्म दर्ता प्रमाणपत्र</h3>
+      <h3 style="text-align: center;">(Birth Registration Certificate)</h>
+  </div>
+  
+  
+  <div>
+  
+  <form action="/register/signup" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+    <table border="1px solid #ddd" width="100%"  style="border-collapse: collapse">
+    <tr>
+    
+      <td ><label for="firstname">First Name:</label>
+      <input type="text" class="form-control" id="firstname" placeholder="Enter First Name" name="firstname" value="<%=typeof users!=="undefined" && users.firstname?users.firstname:" " %>">
+      <% if (typeof errors !='undefined' && errors.firstname) { %>
+        <p style="color: red;"><%= errors.firstname.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+      <label for="middlename">Middle Name:</label>
+      <input type="text" class="form-control" id="middlename"  name="middlename">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname" value="<%=typeof users!=="undefined" && users.lastname?users.lastname:" " %>">
+      <% if (typeof errors !='undefined' && errors.lastname) { %>
+        <p style="color: red;"><%= errors.lastname.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+      <label for="Dateofbirth">Date Of Birth:</label>
+      <input type="date" class="form-control" id="Dateofbirth" placeholder="Enter DOB" name="Dateofbirth" value="<%=typeof users!=="undefined" && users.Dateofbirth?users.Dateofbirth:" " %>">
+      <% if (typeof errors !='undefined' && errors.Dateofbirth) { %>
+        <p style="color: red;"><%= errors.Dateofbirth.msg %></p>
+        <%} %>
+    </div><div class="form-group">
+      <label for="Gender">Gender:</label>
+      <select name="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <% if (typeof errors !='undefined' && errors.Gender) { %>
+        <p style="color: red;"><%= errors.Gender.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+      <label for="PermanentAddress">Permanent Address:</label>
+      <input type="text" class="form-control" id="PermanentAddress" placeholder="Enter Permanent Address" name="PermanentAddress" value="<%=typeof users!=="undefined" && users.PermanentAddress?users.PermanentAddress:" " %>">
+      <% if (typeof errors !='undefined' && errors.PermanentAddress) { %>
+        <p style="color: red;"><%= errors.PermanentAddress.msg %></p>
+        <%} %>
+    </div>
+    
+      <label for="BirthPlace">Birth Place:</label>
+      <input type="text" class="form-control" id="BirthPlace" placeholder="Enter Birth Place" name="BirthPlace" value="<%=typeof users!=="undefined" && users.BirthPlace?users.BirthPlace:" " %>">
+      <% if (typeof errors !='undefined' && errors.BirthPlace) { %>
+        <p style="color: red;"><%= errors.BirthPlace.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+    <label for="image">Upload Hospital Birth-Card:</label>
+      <input type="file"  class="form-control-file" name="image" id="image" accept="image/*"></div>
+
+    <div class="form-group">
+      <label for="Grandfather">Full Name of Grandfather:</label>
+      <input type="text" class="form-control" id="Grandfather" placeholder="Enter Full Name of Grandfather" name="Grandfather" value="<%=typeof users!=="undefined" && users.Grandfather?users.Grandfather:" " %>">
+      <% if (typeof errors !='undefined' && errors.Grandfather) { %>
+        <p style="color: red;"><%= errors.Grandfather.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+    <hr>  <label for="">Father's Details</label><hr>
+      
+    </div>
+    <div class="form-group">
+      <label for="Fathername">Full Name:</label>
+      <input type="text" class="form-control" id="Fathername" placeholder="Enter Full Name" name="Fathername" value="<%=typeof users!=="undefined" && users.Fathername?users.Fathername:" " %>">
+      <% if (typeof errors !='undefined' && errors.Fathername) { %>
+        <p style="color: red;"><%= errors.Fathername.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+      <label for="fathercitizenship">ID(citizenship/password) Number:</label>
+      <input type="number" class="form-control" id="fathercitizenship" placeholder="Enter ID Number" name="fathercitizenship" value="<%=typeof users!=="undefined" && users.fathercitizenship?users.fathercitizenship:" " %>">
+      <% if (typeof errors !='undefined' && errors.fathercitizenship) { %>
+        <p style="color: red;"><%= errors.fathercitizenship.msg %></p>
+        <%} %>
+    </div>
+    <div class="form-group">
+     <hr> <label for="mothername">Mother's Details:</label><hr>
+    </div>
+    <div class="form-group">
+      <label for="mothername">Full Name:</label>
+      <input type="text" class="form-control" id="mothername" placeholder="Enter Mother's Name"  name="mothername" value="<%=typeof users!=="undefined" && users.mothername?users.mothername:" " %>">
+      <% if (typeof errors !='undefined' && errors.mothername) { %>
+        <p style="color: red;"><%= errors.mothername.msg %></p>
+        <%} %>
+      <div class="form-group">
+      <label for="mothercitizenship">ID(citizenship/password) Number:</label>
+      <input type="number" class="form-control" id="mothercitizenship" placeholder="Enter ID Number" name="mothercitizenship" value="<%=typeof users!=="undefined" && users.mothercitizenship?users.mothercitizenship:" " %>">
+      <% if (typeof errors !='undefined' && errors.mothercitizenship) { %>
+        <p style="color: red;"><%= errors.mothercitizenship.msg %></p>
+        <%} %>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div></td>
+  </tr>
+    </table>
+  </form>
+</div>
+<div class="footer">
+    <center> <p> सर्वाधिकार © २०७८ नेपाल सरकार,  राष्ट्रिय सूचना प्रविधि केन्द्र, सिंहदरवार, काठमाडौं</p></center>
+ </div>
+
+</body>
+</html>

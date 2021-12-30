@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birth certificate</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		td{
+			padding: 15px;
+		}
+		#s1{
+			text-align: center;
+			margin-bottom: 10px;
+
+		}
+		img{
+			position: absolute;
+			top: 15px;
+			left: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="s1">
+      <p>अनुसूची १२</p>
+      <p>नियम ७ सँग सम्बन्धित</p>
+      <p>नेपाल सरकार(Government of Nepal)</p>
+      <p>वडा नं.१५,भक्तपुर नगरपालिका </p>
+      <p>(ward No.15,Bhaktapur Muncipality)</p>
+  </div>
+  	<img src="nepallogo.png" height="100px" width="100px">
+
+      <div>
+      <h1 style="text-align: center;">जन्म दर्ता प्रमाणपत्र</h1>
+      <h2 style="text-align: center;">birth registration certificate</h2>
+  </div>
+  <table border="1" width="100%"  style="border-collapse: collapse; ">
+  	<div>
+  	     <tr>
+      <td>firstname: <%= user.firstname %></td>
+    </tr>
+      <tr>
+        <td>middlename: <%= user.middlename %></td>
+      </tr>
+      <tr>
+      <td>lastname: <%= user.lastname %></td>
+      </tr>
+      <tr>
+    <td>Dateofbirth :<%= user.Dateofbirth %></td>
+    </tr>
+    <tr>
+    <td>Citizenship :<%= user.Citizenship %></td>
+    </tr>
+    <tr>
+  <td>Fathername : <%= user.Fathername %></td>
+  </tr>
+  <tr>
+  <td>mothername : <%= user.mothername %></td>
+  </tr>
+  <tr>
+  <td>sex :<%= user.Sex %></td>
+  </tr>
+</div>
+  </table>
+</body>
+</html>

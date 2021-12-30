@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birth certificate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding:5px;
+		}
+		td{
+			padding:10px;
+		}
+    
+		#s1{
+			text-align: center;
+			margin-bottom: 1px;
+
+		}
+   
+  
+  .navbar {
+  width: 100%;
+  background-color:blue;
+  overflow: auto;
+  }
+
+.navbar a {
+  float: left;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  .fa{
+  
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  }
+
+}
+
+    
+        .footer{
+  position:static;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+  }
+		
+	</style>
+</head>
+
+<body id="on1" style="background-color: rgb(235, 235, 222);">
+  <form action="/register/pdf" method="POST">
+    
+    <div style="font-weight: normal;color:white;background-attachment: white;">
+    <nav class="navbar navbar-expand-sm">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+          <img src="http://localhost:8000/nav/np.jpg" alt="logo" style="width:90px;">
+        </a>     
+            <h2>Birth Registration</h2> 
+      <div class="navbar">
+        <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a> 
+       
+      </div></div></nav>
+	<div id="s1">
+      <p>अनुसूची १२</p>
+      <p>नियम ७ सँग सम्बन्धित</p>
+      <p>नेपाल सरकार(Government of Nepal)</p>
+    <!--  <p>वडा नं.१५,भक्तपुर नगरपालिका </p>
+      <p>(ward No.15,Bhaktapur Muncipality)</p>-->
+  
+  	
+
+      
+      <h4 style="text-align: center;">जन्म दर्ता प्रमाणपत्र</h3>
+      <h3 style="text-align: center;">(Birth Registration Certificate)</h>
+  </div>
+  <div class="container-fluid">
+      <div class="form-group">
+  <table border="1px solid #ddd" width="100%"  style="border-collapse: collapse; background-color: white;">
+  	
+  	     <tr>
+      <td colspan="2"><b>First Name:<input type="text" id="firstname" name="firstname" value="<%= user.firstname %>" readonly></b> </td>
+    </tr>
+      <tr>
+        <td colspan="2"><b>Middle Name:<input type="text" id="" name="middlename" value="<%= user.middlename %>" readonly></b> </td>
+      </tr>
+      <tr>
+      <td colspan="2"><b>Last Name:<input type="text" id="" name="lastname" value="<%= user.lastname %>" readonly></b> </td>
+      </tr>
+      <tr>
+    <td colspan="2"><b>Date of Birth :<input type="date" id="" name="Dateofbirth" value="<%= user.Dateofbirth %>" readonly></b></td>
+    </tr>
+    
+        <tr>
+            <td colspan="2"><b>Gender :<input type="text" id="" name="Gender" value="<%= user.Gender %>" readonly></b></td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Permanent Address:<input type="text" id="" name="PermanentAddress" value="<%= user.PermanentAddress %>" readonly></b></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Birth Place:<input type="text" id="" name="BirthPlace" value="<%= user.BirthPlace %>" readonly></b></td>
+                    </tr>
+  
+ 
+                    <tr>
+                        <td colspan="2"><b>Full Name of Grandfather:<input type="text" id=" " name="Grandfather" value="<%= user.Grandfather %>" readonly></b></td>
+                        </tr>
+                     
+                        <tr>
+                            <th rowspan="3">Father's Details</th>
+                            </tr>
+                            <tr>
+                              <td>Full name:<input type="text" id="" name="Fathername" value="<%= user.Fathername %>" readonly></td>
+                              </tr>
+                              <tr>
+                                <td>ID(citizenship/password)Number:<input type="text" id="" name="fathercitizenship" value="<%= user.fathercitizenship %> " readonly></td>
+                                </tr>
+                                <tr>
+                                  <th rowspan="3">Mother's Details</th>
+                                  </tr>
+                                  <tr>
+                                    <td>Full name:<input type="text" id="" name="mothername" value="<%= user.mothername %>" readonly></td>
+                                    </tr>
+                                    <tr>
+                                      <td>ID(citizenship/password)Number<input type="text" id="" name="mothercitizenship" value="<%= user.mothercitizenship %>" readonly>:</td>
+                                      </tr>
+                                      <tr>
+                                        
+</table></div><button type="submit">Download as pdf</button></div> 
+<div class="footer">
+    <center> <p> सर्वाधिकार © २०७८ नेपाल सरकार,  राष्ट्रिय सूचना प्रविधि केन्द्र, सिंहदरवार, काठमाडौं</p></center>
+ </div>
+ </form>
+ </body>
+</html>
